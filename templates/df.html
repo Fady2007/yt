@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files Downloader</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static' , filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static' , filename='css/all.min.css') }}"
+    />
+  </head>
+  <body>
+    <h1 id="errMsg"></h1>
+
+    <div class="cenbottom">
+      <a href="/"> <i class="fa-brands fa-youtube"></i> Youtube app</a>
+      <a href="/qr"> <i class="fa fa-qrcode"></i> Qrcode app </a>
+    </div>
+
+    <div class="copyright">
+      <p>
+        &copy; <span></span> Created by
+        <i class="fa fa-heart co-pr"> </i>
+        Fady
+      </p>
+    </div>
+
+    <div class="main">
+      <div>
+        <h1 class="intro" style="color: rgb(184, 0, 230)">
+          <i class="fa fa-file"></i> File Downloader
+        </h1>
+      </div>
+      <input
+        type="text"
+        style="border: 1px solid rgb(204, 0, 255); color: rgb(184, 0, 230)"
+        placeholder="Insert link.."
+        id="url"
+      />
+      <center>
+        <div class="nDiv hidden">
+          <p>Do you like to name this file ?</p>
+          <input type="text" placeholder="File name.." id="ninp" />
+          <p>File size: <span></span></p>
+        </div>
+      </center>
+      <br />
+      <button class="pubtn dis">
+        <i class="fa fa-download"></i> Download File
+      </button>
+    </div>
+    <script src="{{ url_for('static' , filename='js/all.min.js')}}"></script>
+    <script
+      src="{{ url_for('static' , filename='js/df.js')}}"
+      type="module"
+    ></script>
+  </body>
+</html>
